@@ -27,11 +27,11 @@ myModule.directive('directiveName', function (injectables) {
 });
 ```
 
-Let's build examples to demonstrate the following:
+Following demos are included in this repository:
 
 - Getting started with creating directives: naming directive and ***link*** function with usages of scope, element and attributes
-- Adding watchers and changes on attributes
-- Using ***restrict*** to build element, attribute and class based directives. Need not cover comment as it is not used as far as we know, can mention during talk
+- Adding watchers on scope and observers on attributes
+- Using ***restrict*** to build element and attribute based directives
 - Defining content of directive using ***template/templateUrl***
 - Use of ***replace***
 - ***Scope*** and behavior of scope in different scenarios
@@ -39,9 +39,37 @@ Let's build examples to demonstrate the following:
     - When scope is set to true
     - Isolated scope and use of @, = and &
 - Defining a ***controller*** and calling controller methods in link function
-- Use of ***require***. A custom validation directive could be a better example
+- Use of ***require***
 - ***Transclude*** and its importance
 - ***Compile***, difference between pre link and post link
-- Let's decide if we need to demonstrate ***priority*** and ***terminal***
-- Let's have demos on `$parse`, `$compile` and `$interpolate`. But we will show them if there is enough energy in the listeners
-- Some demos showing creating wrappers around jQuery plugins
+- ***priority*** and ***terminal***
+
+There are some advanced demos and showcases. We couldn't cover all of them during the meetup session:
+
+- A demo on `$parse`
+- Nested directives using transclude
+- Wrapping jQuery UI datepicker in a directive
+- Parsing markdown text
+- A directive displaying different feeds from tumblr
+
+### To run the application
+
+1. Install Node.js
+
+2. Open a command prompt, navigate to the folder containing demos and run the commands "npm install" and "bower install"
+
+3. Run the command "grunt"
+
+4. Open a browser and change the URL to: http://localhost:9000
+
+####Learning Resources on Directives
+
+- [Scott Allen's blog post on compile, pre and post link][1]
+- [Amit Gharat's blog post on directives][2]
+- [Directives Videos on egghead.io][3]
+- [Scott Allen's talk on directives at NDC Oslo][4]
+
+[1]: http://odetocode.com/blogs/scott/archive/2014/05/28/compile-pre-and-post-linking-in-angularjs.aspx
+[2]: http://amitgharat.wordpress.com/2013/06/08/the-hitchhikers-guide-to-the-directive/
+[3]: https://egghead.io/search?q=directives
+[4]: http://vimeo.com/97505653
