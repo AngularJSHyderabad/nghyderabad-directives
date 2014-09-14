@@ -1,0 +1,34 @@
+<h1>Directives in AngularJS <small>Some real-world demos</small> </h1>
+<div class="row">
+    <tabset>
+        <tab heading="Markdown Viewer">
+            <div class="col-md-2"></div>
+            <div class="col-md-4">
+                <textarea ng-model="markdownText" rows="15" cols="50"></textarea>
+            </div>
+            <div class="col-md-4">
+                <markdown-viewer markdown-model="markdownText"></markdown-viewer>
+            </div>
+            <div class="col-md-2"></div>
+
+        </tab>
+        <tab heading="jQuery UI Datepicker">
+            Select Date: <input type="text" date-picker ng-model="startDate" />
+            <br/>
+            <br/>
+            <span>{{startDate}}</span>
+        </tab>
+        <tab heading="Tumblr Feeds">
+
+            <div ng-repeat="feedrec in tumblrPosts" class="feed-content">
+                Type: <b>{{feedrec.type}}</b>
+                <br/>
+                <a style="text-decoration: underline;" target="_blank" ng-href="{{feedrec.post_url}}">View Post on Tumblr</a>
+                <br/>
+                <tumblr-feed-item feedrec="feedrec" />
+                <br/>
+                sssss
+            </div>
+        </tab>
+    </tabset>
+</div>

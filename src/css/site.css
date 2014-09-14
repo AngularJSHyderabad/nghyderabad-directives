@@ -1,0 +1,72 @@
+body {
+    padding-top: 50px;
+}
+.starter-template {
+    padding: 40px 15px;
+    text-align: center;
+}
+.thumbnail {
+    padding-bottom: 20px;
+    margin: 10px;
+    background-color: #DBDBDB;
+}
+.thumbnail .caption {
+    text-align: center;
+    padding-top: 20px;
+    font-family: 'Comic Sans MS';
+}
+
+.feed-list {
+    padding: 25px;
+    padding-right: 0 !important;
+    overflow: hidden;
+    border-right: 1px solid #E3E3E3;
+    background-color: #FFF;
+    margin-top: 60px;
+}
+.feed-item {
+    /*width: 50%;*/
+    width: 100%;
+    padding-right: 25px;
+    padding-bottom: 40px;
+    float: left;
+}
+.feed-image {
+    width: 100%;
+}
+.feed-content {
+    color: #2a2d33;
+    background-color: cyan;
+    padding-top: 20px;
+    padding-bottom: 25px;
+    overflow-wrap: break-word;
+    margin-bottom: 5px;
+}
+.feed-date {
+    color: #8992a6;
+    font-size: .7rem;
+    border-bottom: 1px solid #dadada;
+    padding-bottom: 10px;
+}
+.feed-meta {
+    color: #696969;
+    font-size: .7rem;
+}
+.feed-meta .more {
+    display: inline-block;
+    float: left;
+    height: 36px; /*hardcoded for the twitter feed retweet avatars (36x36px)*/
+    line-height: 36px;
+}
+.feed-actions {
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #dadada;
+    background-color: #f0f0f0;
+    overflow: auto;
+    padding: 8px 16px;
+}
+
+.feed-container>a{
+    text-decoration: underline;
+    text-decoration-color: blue;
+}

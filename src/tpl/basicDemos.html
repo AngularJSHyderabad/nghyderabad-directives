@@ -1,0 +1,91 @@
+<h1>Directives in AngularJS <small>Maximizing the fun of working with AngularJS</small> </h1>
+<div class="row">
+
+    <tabset>
+        <tab heading="Simple Directive" title="Covers link, watch, observe, restrict, template/templateUrl">
+            <input type="text" ng-model="name" />
+            <br />
+            <br />
+
+            <div show-name-one name-val="name"></div>
+            <show-name-two name-val="{{name}}"></show-name-two>
+
+        </tab>
+
+        <tab heading="Scope">
+            <div class="col-md-4">
+                Directive with no scope specified
+                <br />
+                <directive-no-scope></directive-no-scope>
+            </div>
+            <div class="col-md-4">
+                Directive with Inherited Scope
+                <br />
+                <directive-inherited-scope></directive-inherited-scope>
+            </div>
+            <div class="col-md-4">
+                Directive with Isolated Scope
+                <br />
+                <directive-isolated-scope></directive-isolated-scope>
+            </div>
+        </tab>
+        <tab heading="Isolated Scope">
+            <div>
+                <h3>This is outside directive</h3>
+                <br/>
+                Company Name: <input type="text" ng-model="stock.company" />
+                <br/>
+                Stock Value: <input type="text" ng-model="stock.value" />
+            </div>
+            <hr/>
+            <div directive-isolated-scope-demo="" company-name="stock.company" stock-value="{{stock.value}}" change-value="changeStockValue()">
+
+            </div>
+        </tab>
+        <tab heading="Controller">
+            <div style="font-size: large;">
+                Current temperature of Hyderabad: <span directive-with-controller directive-with-require></span>
+            </div>
+        </tab>
+        <tab heading="Transclude">
+            <h3>Using Transclude</h3>
+            <directive-with-transclude>
+                <i>This text is transcluded</i><br/>
+                City transcluded: {{city}}
+            </directive-with-transclude>
+        </tab>
+        <tab heading="Compile">
+            <directive-with-compile>
+                <div>This is the transcluded text!</div>
+            </directive-with-compile>
+        </tab>
+        <tab heading="Priority and Terminal">
+            <div directive-with-higher-priority="" directive-with-lower-priority=""></div>
+        </tab>
+        <tab heading="Advanced">
+            <tabset>
+                <tab heading="$parse">
+                    <directive-with-parse person-name="person.name" person-place="person.place" person-occupation="person.occupation"></directive-with-parse>
+                    <br/>
+                    <br/>
+                    Name: <input type="text" ng-model="person.name" />
+                    <br/>
+                    <br/>
+                    Place: <input type="text" ng-model="person.place" />
+                    <br/>
+                    <br/>
+                    Occupation: <input type="text" ng-model="person.occupation" />
+                </tab>
+                <tab heading="Nested Directives">
+                    <div ng-repeat="event in events">
+                        <box-content heading="event.title">
+                            <div>{{event.description}}</div>
+                            <div style="font-style: italic;">{{event.date | date}}</div>
+                        </box-content>
+                    </div>
+                </tab>
+            </tabset>
+        </tab>
+    </tabset>
+
+</div>
